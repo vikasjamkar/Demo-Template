@@ -1,0 +1,516 @@
+/* Root variables */
+:root {
+    --primary-color: #7DF9FF;
+    --secondary-color: #284B4B;
+    --trinary-color:#d4fdff;
+    --white-color :#fff;
+    --font-family: "Contemporary Sans Bold" !important; 
+    --h1-font-size: 75px;
+    --h2-font-size: 45px;
+    --h3-font-size: 36px;
+    --h4-font-size: 28px;
+    --p-font-size: 20px;
+    --padding-sections:45px 0px;
+}
+
+/* Global styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: var(--h1-font-size);
+}
+h2{
+    font-size: var(--h2-font-size);
+}
+h3{
+    font-size: var(--h3-font-size);
+}
+h4{
+    font-size: var(--h4-font-size);
+    line-height: 1.5;
+}
+p{
+    font-size: var(--p-font-size);
+}
+header{
+    background-color: var(--secondary-color);
+}
+.p-f-s{
+    font-size: 16px;
+   
+}
+.p-f-s img{
+    cursor: pointer;
+   
+}
+.p-f-s-2 p{
+    font-size: 18px;
+}
+.container-custom{
+    margin: 0px 50px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    color: var(--primary-color);
+    padding-top: 10px;
+}
+.header span a {
+    text-decoration: none;
+    margin-left: 45px;
+    color: var(--primary-color);
+    padding: 13px 0px;
+    font-size: 14px;
+}
+
+.logo-name h3{
+    font-size: 36px;
+}
+/* General styles for links */
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 0;
+    position: relative; /* Necessary for the pseudo-element */
+    display: inline-block; /* Ensures proper positioning */
+  }
+  
+  /* Add bottom border via pseudo-element for active link */
+  nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Align at the bottom */
+    left: 0;
+    width: 100%; /* Full width */
+    height: 4px; /* Thickness of the border */
+    background-color: var(--primary-color); /* Border color */
+  }
+  
+  /* Add hover effect for other links */
+  nav a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-color);
+  }
+  
+
+  /* Dropdown Styles */
+.dropdown-custom {
+    position: relative;
+  }
+  
+  .dropdown-toggle-custom {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown-toggle-custom .icon {
+    font-size: 12px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu-custom {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    width: 150px;
+    background-color: var(--secondary-color);
+    z-index: 1000;
+    padding: 16px;
+
+  }
+  nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .dropdown-menu-custom a {
+    display: block;
+    padding: 5px 10px;
+    color: #333;
+    margin-left: 0px !important;
+  }
+  
+  .dropdown-custom:hover .dropdown-menu-custom {
+    display: block;
+  }
+  
+  .dropdown-custom:hover .icon {
+    transform: rotate(85deg); /* Rotate icon on hover */
+  }
+
+.hero-banner {
+    position: relative;
+    background-image: url('background.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 500px; /* Adjust height as needed */
+    color:var(--white-color); /* Text color for contrast */
+}
+  
+  .hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1;
+  }
+  
+  .hero-banner .container-custom{
+    position: relative;
+    z-index: 2; /* Ensures text is above the overlay */
+  }
+  .hero-banner .py{
+    padding: 45px 0px;
+  }
+  .hero-banner .sub-title{
+    font-size: 28px;
+  }
+  .S-L-1{
+    background-color: var(--trinary-color);
+    padding:var(--padding-sections);
+  }
+  .S-D-2{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding:var(--padding-sections);
+  }
+ 
+  .case-study{
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .case-study .left-side{
+    width: 45% ;
+    height: auto;
+  }
+  .case-study .right-side{
+    width: 65% ;
+    background-color: var(--trinary-color);
+    height: auto;
+    padding: 30px 40px;
+  }
+  .case-study .p-w{
+    width: 450px;
+  }
+
+  .hero-banner-footer {
+    position: relative;
+    background-image: url('background.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 460px; /* Adjust height as needed */
+    color: var(--white-color); /* Text color for contrast */
+  }
+  
+  .hero-banner-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1;
+  }
+  .hero-banner-footer .container-custom {
+    position: relative;
+    z-index: 2; /* Ensures text is above the overlay */
+  }
+  .hero-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    height: 460px;
+  
+  }
+  .hero-box h3{
+     font-size: 35px;
+     padding: 30px 60px;
+     line-height: 1.6;
+     color: var(--white-color);
+  }
+
+
+
+
+  .container-box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 30px 0px;
+}
+
+/* Left Section: Overlapping Circles */
+.circles-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin-top: -150px;
+}
+
+/* Common Circle Styles */
+.circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+/* Specific Circle Positions */
+.circle:nth-child(1) {
+    top: 26%;
+    left: 0;
+    z-index: 1;
+}
+
+.circle:nth-child(2) {
+    bottom: 16%;
+    right: -7px;
+    z-index: 1;
+}
+
+.main-circle {
+    top: 94%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    font-size: 16px;
+}
+
+
+/* Hover Effects */
+.circle:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Dotted Connection Line */
+.connection-line {
+    width: 60px; /* Adjust the width of the dotted line */
+    height: 0;
+    border-bottom: 2px dotted var(--secondary-color); /* Dotted border */
+    align-self: center; /* Center it vertically between the boxes */
+    margin-top: -80px;
+    margin-left: 5px;
+}
+
+
+/* Right Section: Dotted Circle with Text */
+.dotted-circle-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.dotted-circle {
+    width: 230px;
+    height: 230px;
+    border: 2px dotted;
+    border-right-color: var(--trinary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 20px 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+
+.dotted-border {
+    border: 2px solid var(--secondary-color);
+    width: 100px;
+    margin: 20px auto; /* Center the circle horizontally on the page */
+}
+
+.info-text {
+    font-size: 14px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 32px;
+}
+
+
+footer{
+    background-color: var(--secondary-color);
+    padding-top: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: var(--primary-color);
+  }
+
+
+.diagram {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.box {
+    padding: 10px 40px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+}
+
+.line {
+    display: flex;
+    align-items: center;
+}
+
+.dashed {
+    width: 100px; /* Adjust the width of the dotted line */
+    height: 0;
+    border-bottom: 2px dotted var(--secondary-color); /* Dotted border */
+    align-self: center; /* Center it vertically between the boxes */
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid var(--secondary-color);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.triangle.reverse {
+    transform: rotate(180deg);
+}
+
+/* Custom list styling */
+.custom-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .custom-list li {
+    position: relative; /* For positioning the square */
+    padding-left: 25px; /* Space for the square */
+    line-height: 1.9; /* Adjust for desired spacing */
+    font-size: 20px; /* Adjust as needed */
+  }
+  
+  /* Add the square using ::before */
+  .custom-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px; /* Square size */
+    height: 10px; /* Square size */
+    background-color: var(--primary-color); /* Customize square color */
+  }
+  .btn{
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 25px;
+    padding: 5px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn:hover {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    text-decoration: none; /* Prevent underline on hover */
+  }
+
+  .btn-lite{
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 25px;
+    padding: 5px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn-lite:hover {
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+    text-decoration: none; /* Prevent underline on hover */
+  }
+
+  /* Style for the description list */
+dl {
+    margin: 20px 0;
+    padding: 0;
+  }
+  
+  /* Style for <dt> (definition term) */
+  dl dt {
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-top: 15px;
+    position: relative;
+    z-index: 11111;
+    font-size: 22px;
+    padding-left: 30px; /* Space for the square marker */
+  }
+  
+  dl dt::before {
+    content: ""; /* Empty content for custom square marker */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px; /* Width of the square */
+    height: 10px; /* Height of the square */
+    background-color: var(--secondary-color); /* Square color */
+    z-index: 11111;
+  }
+  
+  /* Style for <dd> (definition description) */
+  dl dd {
+    margin: 5px 0 15px 32px; /* Indented under <dt> */
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+  
+
+  .e-m a{
+    text-decoration: none;
+    color: var(--primary-color);
+  }
