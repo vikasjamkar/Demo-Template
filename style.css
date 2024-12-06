@@ -58,7 +58,7 @@ body {
   }
 
   .right-section p {
-    color: var(--text-white);
+    color: var();
     line-height: 1.8;
     font-size: 1.1rem;
   }
