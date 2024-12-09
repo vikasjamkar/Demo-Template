@@ -49,3 +49,20 @@ circles.forEach(circle => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.getElementById("mobile-nav-toggle");
+  const mobileNav = document.querySelector("nav");
+  const menuIcon = navToggle.querySelector(".menu-icon");
+
+  navToggle.addEventListener("click", () => {
+    // Toggle the mobile nav visibility
+    mobileNav.classList.toggle("nav");
+
+    // Change the icon between hamburger and cross
+    if (mobileNav.classList.contains("nav")) {
+      menuIcon.textContent = "✕"; // Cross icon
+    } else {
+      menuIcon.textContent = "☰"; // Hamburger icon
+    }
+  });
+});
