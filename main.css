@@ -4,14 +4,15 @@
   --secondary-color: #284b4b;
   --trinary-color: #d4fdff;
   --white-color: #fff;
-  --overlay-color: #00000080;
+  --overlay-color: #284b4ba1;
   --font-family: "Contemporary Sans Bold" !important;
   --font-weight: 700;
-  --h1-font-size: 75px;
-  --h2-font-size: 50px;
+  /* --h1-font-size: 75px; */
+  --h1-font-size: 84px;
+  --h2-font-size: 56px;
   --h3-font-size: 36px;
-  --p-font-size: 28px;
-  --p-s-font-size:18px;
+  --p-font-size: 30px;
+  --p-s-font-size:20px;
   --padding-sections: 45px 0px;
 }
 
@@ -24,7 +25,7 @@ body {
 }
 
 .container-custom {
-  margin: 0px 50px;
+  margin: 0px 70px;
 }
 
 /* btn styles */
@@ -46,6 +47,9 @@ h2 {
   font-size: var(--h2-font-size);
   font-weight: var(--font-weight);
 }
+.h2-reserve-color {
+  color: var(--trinary-color);
+}
 h3 {
   font-size: var(--h3-font-size);
 }
@@ -58,13 +62,20 @@ p {
 }
 header {
   background-color: var(--secondary-color);
-  color: var(--primary-color);
+  color: var(--trinary-color);
   padding-top: 19px;
 }
 
 .logo-name {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: var(--font-weight);
+
+
+}
+.logo-name a{
+
+  text-decoration: none;
+  color: var(--trinary-color);
 
 }
 
@@ -76,13 +87,19 @@ nav {
 }
 nav a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--trinary-color);
   font-weight:var(--font-weight);
-  font-size: 18px;
+  font-size: 20px;
   line-height: 24px;
   padding: 8px 0;
   position: relative; 
   display: inline-block; 
+  padding-bottom: 20px;
+}
+
+
+nav a.active{
+  color: var(--primary-color);
 }
 
 nav a.active::after {
@@ -91,7 +108,7 @@ nav a.active::after {
   bottom: 0; 
   left: 0;
   width: 100%; 
-  height: 4px; 
+  height: 2px; 
   background-color: var(--primary-color);
 }
 
@@ -101,7 +118,7 @@ nav a:hover::after {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 4px;
+  height: 2px;
   background-color: var(--primary-color);
 }
 
@@ -135,7 +152,7 @@ nav a:hover::after {
 .dropdown-menu-custom a {
   display: block;
   padding: 5px 10px;
-  color: var(--primary-color);
+  color: var(--trinary-color);
   margin-left: 0px !important;
 }
 
@@ -155,7 +172,8 @@ nav a:hover::after {
   background-image: url("background.png");
   background-size: cover;
   background-position: center;
-  height: 600px; 
+  /* height: 600px;  */
+  /* height: 85vh */
   color: var(--white-color);
   
 }
@@ -182,11 +200,13 @@ nav a:hover::after {
   font-weight: var(--font-weight);
 }
 .hero-content {
-  padding: 150px 0px;
+  padding: 210px 0px;
 }
 .hero-subtitle {
-  font-size: 35px;
-  line-height: 40px;
+  font-size: 30px;
+  line-height: 50px;
+  margin-top: 30px;
+
 }
 
 /* sections styles */
@@ -260,10 +280,15 @@ nav a:hover::after {
 
 }
 
-.circle:hover {
+/* .circle:hover {
   background-color: var(--secondary-color);
-  color: var(--primary-color);
+  color: var(--trinary-color);
+} */
+.circle-hover {
+  background-color: var(--secondary-color);
+  color: var(--trinary-color);
 }
+
 
 .connection-line {
   width: 61px;
@@ -304,10 +329,15 @@ nav a:hover::after {
   font-size: var(--p-s-font-size);
   font-weight: var(--font-weight);
   color: var(--secondary-color);
-  line-height: 20px;
+  line-height: 25px;
   text-align: center;
   padding: 0px 15px;
   margin-top: 32px;
+  width: 381px;
+  position: absolute;
+  text-align: left;
+  left: 25px;
+  top: 25px;
 
 }
 
@@ -322,7 +352,7 @@ nav a:hover::after {
   padding: 10px 25px;
   border-radius: 43px;
   text-align: center;
-  border: 1px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color);
 }
 .box p{
   margin: 0;
@@ -337,16 +367,16 @@ nav a:hover::after {
 .dashed {
   width: 80px; 
   height: 0;
-  border-bottom: 2px dotted var(--secondary-color);
+  border-bottom: 3px dotted var(--secondary-color);
   align-self: center; 
 }
 
 .triangle {
   width: 0;
   height: 0;
-  border-left: 10px solid var(--secondary-color);
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
+  border-left: 20px solid var(--secondary-color);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
 }
 
 .triangle.reverse {
@@ -373,8 +403,8 @@ nav a:hover::after {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 10px; /* Square size */
-  height: 10px; /* Square size */
+  width: 8px; /* Square size */
+  height: 8px; /* Square size */
   background-color: var(--primary-color);
 }
 
@@ -384,10 +414,11 @@ nav a:hover::after {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 25px;
 }
 
 .list-item-xyz {
-  padding-left: 30px;
+ padding-left: 25px;
   position: relative;
 }
 
@@ -402,7 +433,7 @@ nav a:hover::after {
 
 .title-random-123 {
   font-size:var(--p-font-size);
-  margin: 0 0 5px;
+  margin: 10px 0 0px;
   color: var(--secondary-color);
 }
 
@@ -416,7 +447,7 @@ nav a:hover::after {
 /* section 4 styles */
 
 .diagram-img {
-  width: 650px;
+  /* width: 650px; */
 }
 .diagram-img-caption {
   border: 1px solid var(--primary-color);
@@ -428,10 +459,17 @@ nav a:hover::after {
 
 /* setion 5 styles */
 .case-study-content{
-  max-width: 500px;
+  /* max-width: 500px; */
   line-height: 24px;
   font-size: var(--p-s-font-size);
 
+}
+
+.case-studies p {
+  margin-bottom: 5px;
+}
+.case-studies > div > div > div.col-lg-8 > div:nth-child(2){
+margin-top: 20px;
 }
 
 
@@ -439,9 +477,10 @@ nav a:hover::after {
 footer {
   background-color: var(--secondary-color);
   padding-top: 35px;
+  padding-top: 30px;
   padding-left: 0px;
   padding-right: 0px;
-  color: var(--primary-color);
+  color: var(--trinary-color);
 }
 .footer-text{
   font-size: 16px;
@@ -455,13 +494,19 @@ footer {
   
 }
 .footer-content a{
-  color: var(--primary-color);
+  color: var(--trinary-color);
   text-decoration: none;
 }
 .footer-dash{
   font-size: 15px;
 }
 
+.linkedin{
+  margin-bottom: -4px;
+}
+footer h2 {
+  font-size: 45px;
+}
 @media (min-width:768px) and (max-width:1023px){
   nav{
     display: none;
